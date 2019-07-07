@@ -7,4 +7,5 @@ export interface ICategory {
   ballotNumber: number;
   startDate: string;
   endDate: string;
+  image: string;
 }

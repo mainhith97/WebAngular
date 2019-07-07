@@ -1,5 +1,4 @@
 <div class="content">
-  <div *ngIf="loading" class='lmask'></div>
   <div *ngIf="data == null"> <h4 style="text-align: center" class="title"><strong>KHÔNG CÓ NGƯỜI DÙNG</strong></h4></div>
   <div *ngIf="data != null" class="table-responsive-sm">
   <table class="table table-striped table-bordered">
@@ -16,7 +15,7 @@
       <tbody>
           <tr *ngFor="let data of data ; let i = index">
               <td>{{ i + 1 }}</td>
-              <td><img class="img-fluid" height="50px" width="50px" src="{{ data.avatar }}" alt="image"></td>
+              <td><img class="img-fluid" height="50px" width="50px" src=".../../../../../../assets/img/faces/face-1.jpg" alt="image"></td>
               <td>{{ data.name }}</td>
               <td>{{ data.email }}</td>
               <td>
