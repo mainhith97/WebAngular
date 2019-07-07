@@ -1,0 +1,29 @@
+<div class="limiter">
+  <div class="container-login100" style="background-image: url('assets/img/bg-01.jpg');">
+      <div class="wrap-login100 p-t-30 p-b-50">
+          <span class="login100-form-title p-b-41">
+              Admin Login
+          </span>
+          <form [formGroup] = "loginForm" (ngSubmit) = "submit(loginForm)" class="login100-form validate-form p-b-33 p-t-5">
+
+              <div class="wrap-input100 validate-input" data-validate = "Enter username">
+                  <input type="email" formControlName="username" id="inputEmail" class="input100" placeholder="Username or Email" required autofocus>
+                  <span data-placeholder="&#xe82a;"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate="Enter password">
+                  <input type="password" formControlName="password" id="inputPassword" class="form-control input100" placeholder="Password" required>
+                  <span data-placeholder="&#xe80f;"></span>
+              </div><br>
+              <div style="padding-left: 35px">
+              </div>
+
+              <div class="container-login100-form-btn m-t-32">
+                  <button class="login100-form-btn" type="submit">
+                      Login
+                  </button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

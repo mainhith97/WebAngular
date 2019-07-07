@@ -1,0 +1,115 @@
+
+              <div class="row">
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <a [routerLink]="['/category']">
+                    <div class="card card-stats bg-success">
+                    <div class="card-body ">
+                      <div class="row">
+                        <div class="col-5 col-md-4">
+                          <div class="icon-big text-center icon-warning">
+                            <i class="fa fa-list"></i>
+                          </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                          <div class="numbers">
+                            <p class="card-title">Category</p>
+                            {{data.amountCategory}}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                          <i class="fa fa-refresh"></i> Update now
+                        </div>
+                      </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <a>
+                    <div class="card card-stats bg-info">
+                    <div class="card-body ">
+                      <div class="row">
+                        <div class="col-5 col-md-4">
+                          <div class="icon-big text-center icon-warning">
+                            <i class="fa fa-file"></i>
+                          </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                          <div class="numbers">
+                            <p class="card-title">Post</p>
+                            {{data.amountPost}}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                          <i class="fa fa-refresh"></i> Update now
+                        </div>
+                      </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <a [routerLink]="['/user']">
+                      <div class="card card-stats bg-primary">
+                          <div class="card-body ">
+                            <div class="row">
+                              <div class="col-5 col-md-4">
+                                <div class="icon-big text-center icon-warning">
+                                  <i class="fa fa-user"></i>
+                                </div>
+                              </div>
+                              <div class="col-7 col-md-8">
+                                <div class="numbers">
+                                  <p class="card-title">User</p>
+                                  {{data.amountUser}}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer ">
+                              <hr>
+                              <div class="stats">
+                                <i class="fa fa-refresh"></i> Update now
+                              </div>
+                            </div>
+                        </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <a [routerLink]="['/contact']">
+                    <div class="card card-stats bg-danger">
+                        <div class="card-body ">
+                          <div class="row">
+                            <div class="col-5 col-md-4">
+                              <div class="icon-big text-center icon-warning">
+                                <i class="fa fa-headphones"></i>
+                              </div>
+                            </div>
+                            <div class="col-7 col-md-8">
+                              <div class="numbers">
+                                <p class="card-title">Contact</p>
+                                {{data.amountContact}}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer ">
+                          <hr>
+                          <div class="stats">
+                            <i class="fa fa-refresh"></i> Update now
+                          </div>
+                        </div>
+                      </div>
+                  </a>
+                </div>
+

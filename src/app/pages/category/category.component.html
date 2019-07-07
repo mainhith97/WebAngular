@@ -1,0 +1,23 @@
+
+<div class="wrapper " id="wrapper">
+
+  <div class="container-fluid">
+      <app-header></app-header>
+    <div class="row">
+      <div class="col-md-2">
+          <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-md-10">
+          <div class="header">
+              <h4 class="title">List Categories</h4>
+              <button data-backdrop="static" data-toggle="modal" data-target="#CreateCategoryModal" class="btn btn-info">Create Category</button>
+          </div>
+          <app-list-category></app-list-category>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<app-create-category></app-create-category>
+
