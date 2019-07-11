@@ -28,8 +28,6 @@ export class CreateCategoryComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.buildForm();
-    // this.nations = this.data.nations;
-    // this.checkEnable();
   }
 
   buildForm() {
@@ -52,13 +50,6 @@ export class CreateCategoryComponent implements OnInit {
           }
       });
   }
-
-  // checkEnable() {
-  //     this.disableBtn = false;
-  //     this.categoryForm.valueChanges.subscribe(() => {
-  //         this.disableBtn = this.categoryForm.valid;
-  //     });
-  // }
 }
 
 

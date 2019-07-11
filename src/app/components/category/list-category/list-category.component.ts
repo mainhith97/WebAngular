@@ -15,8 +15,6 @@ export class ListCategoryComponent implements OnInit {
     errorMessage: string;
     page = 1;
     limit = 10;
-    totalItems = 10;
-
     constructor(
         private toastr: ToastrService,
         private categoryService: DataService,
@@ -31,7 +29,6 @@ export class ListCategoryComponent implements OnInit {
           this.res = res;
           if (this.res.success) {
               this.data = this.res.result.data;
-              this.totalItems = this.res.result.totalDoc;
           }
       });
   }

@@ -7,6 +7,7 @@ import { UserComponent } from './pages/user/user.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CreateCategoryComponent } from './components/category/create-category/create-category.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'user',   component: UserComponent },
   { path: 'category',   component: CategoryComponent },
   { path: 'create-category',   component: CreateCategoryComponent },
-  { path: 'contact',   component: ContactComponent }
+  { path: 'contact',   component: ContactComponent },
+  { path: 'edit-category/:id', component: EditCategoryComponent }
 ];
 
 @NgModule({

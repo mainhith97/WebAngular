@@ -19,7 +19,8 @@
             <td>
                 <span class = "label label-info"> {{ data.ballotNumber }}</span>
             </td>
-            <td><a class="fa fa-edit"> </a></td>
+            <td><a routerLink='/edit-category/{{data._id}}' class="fa fa-edit"></a>
+            </td>
             <td><a (click)="removeCategory(data._id)" class="fa fa-trash"> </a></td>
         </tr>
 

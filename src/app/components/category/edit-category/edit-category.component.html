@@ -1,0 +1,54 @@
+<div class="container-fluid panel">
+  <div class="row">
+      <div class="col-lg-8 col-md-7 col-md-offset-2">
+          <div class="card">
+              <div class="header">
+                  <h4 class="title">Update Category <span class="ti-shortcode"></span></h4>
+              </div>
+              <div class="content">
+                  <form [formGroup] = "editCategoryForm" (ngSubmit) = "submit(editCategoryForm)"  novalidate>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label>Name Category</label>
+                                  <input type="text" formControlName="name" value="{{ data?.name }}" class="form-control border-input">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label>Number Vote per User</label>
+                                  <input type="number"  formControlName="ballotNumber" value="{{ data?.ballotNumber }}" class="form-control border-input" >
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label>Start Date</label>
+                                  <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt"  value="{{ data?.startDate }}" formControlName="startDate" class="form-control border-input">
+                                  <owl-date-time #dt></owl-date-time>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <input [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" value="{{ data?.endDate }}" formControlName="endDate" class="form-control border-input">
+                                <owl-date-time #dt2></owl-date-time>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-info btn-fill btn-wd">SAVE</button>
+                    </div>
+                    <div class="clearfix"></div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
-
 import { HomeComponent } from './pages/home/home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { DataService } from './services/data.service';
@@ -22,6 +22,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ListCategoryComponent } from './components/category/list-category/list-category.component';
 import { ListContactComponent } from './components/contact/list-contact/list-contact.component';
 import { CreateCategoryComponent } from './components/category/create-category/create-category.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CreateCategoryComponent } from './components/category/create-category/c
     ContactComponent,
     ListCategoryComponent,
     ListContactComponent,
-    CreateCategoryComponent
+    CreateCategoryComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,9 @@ import { CreateCategoryComponent } from './components/category/create-category/c
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

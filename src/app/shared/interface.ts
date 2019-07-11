@@ -9,3 +9,11 @@ export interface ICategory {
   endDate: string;
   image: string;
 }
+export interface IEditCategory {
+  categoryId: string;
+  name: string;
+  ballotNumber: number;
+  startDate: string;
+  endDate: string;
+  image: string;
+}

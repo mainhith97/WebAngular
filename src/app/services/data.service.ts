@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ILogin, ICategory} from '../shared/interface';
+import { ILogin, ICategory, IEditCategory} from '../shared/interface';
 import { Observable, throwError} from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
@@ -76,6 +76,26 @@ getListCategory(page, limit): Observable<boolean> {
       }),
       catchError(this.handleError)
   );
+}
+
+getDetailCategory(id: string) : Observable<boolean> {
+  return this.http.get<boolean>(`${this.apiUrl}/get-category-by-id/?id=${id}`, httpOptions)
+  .pipe(
+      map(response => {
+          return response;
+      }),
+      catchError(this.handleError)
+  )
+}
+
+postEditCategory(dataEdit: IEditCategory): Observable<boolean> {
+  return this.http.post<boolean>(`${this.apiUrl}/${this.adminPrefix}/edit-category`, dataEdit, httpOptions)
+  .pipe(
+      map(response => {
+          return response;
+      }),
+      catchError(this.handleError)
+  )
 }
 
 removeCategory(id): Observable<boolean> {
